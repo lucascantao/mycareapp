@@ -1,0 +1,50 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container > div {
+  display: flex;
+}
+
+.container > div span img {
+  width: 5rem;
+}
+
+.container button {
+  height: 2rem;
+  width: 5rem;
+  border: none;
+  background: none;
+  border-radius: 3px;
+  font-size: 1.2rem;
+  /* color: rgb(0, 255, 251); */
+  color: var(--footer-color);
+  text-decoration: underline;
+  /* text-shadow: 0 0px 5px var(--footer-color); */
+  /* text-shadow: 0 0px 5px var(--footer-color); */
+  letter-spacing: 1px;
+}
+
+.container button:hover {
+  cursor: pointer;
+  color: var(--button-color-hover);
+}
+
+.container button:active {
+  color: white;
+}
+
+.logo {
+  transform: translateX(10px);
+}
+
+.profilepic {
+  z-index: 5;
+  transform: translateX(-10px);
+}
+
+.profilepic img {
+  border-radius: 100%;
+  border: 3px solid white;
+}
