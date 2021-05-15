@@ -16,6 +16,7 @@ export default function Profile({ img }) {
             </div>
 
             {!session && <button onClick={signIn}>Login</button>}
+            {session && <p><i>{session.user.email}</i></p>}
         </div>
 
     )

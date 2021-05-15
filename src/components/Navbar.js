@@ -1,22 +1,26 @@
 import ExitToAppIcon from '@material-ui/icons/ExitToApp'
-import MenuIcon from '@material-ui/icons/Menu'
-import MenuOpenIcon from '@material-ui/icons/MenuOpen'
-import { useState } from 'react';
-import { signOut } from 'next-auth/client';
+// import MenuIcon from '@material-ui/icons/Menu'
+// import MenuOpenIcon from '@material-ui/icons/MenuOpen'
+// import { useState } from 'react';
+import { useSession, signOut } from 'next-auth/client';
 
 import styles from '../styles/Navbar.module.css';
 
 export default function Navbar() {
 
-    const [active, setActive] = useState(false)
+    // const [active, setActive] = useState(false)
+    const [session, loading] = useSession()
 
     return (
-        <div id={active ? 'active' : ''} className={styles.container}>
+        <div className={styles.container}>
 
-            <span>
-                <MenuIcon fontSize='large' onClick={() => setActive(true)} />
-            </span>
-            { active &&
+            <p>{session ? `Welcome, ${session.user.name}!` : 'My Care'}</p>
+
+            {session && <span onClick={signOut}>
+                {/* <MenuIcon fontSize='large' onClick={() => setActive(true)} /> */}
+                <ExitToAppIcon fontSize='large' />
+            </span>}
+            {/* { active &&
                 <>
                     <div className={styles.options}>
                         <header>
@@ -33,7 +37,7 @@ export default function Navbar() {
 
                     </div>
                 </>
-            }
+            } */}
 
         </div>
     )
