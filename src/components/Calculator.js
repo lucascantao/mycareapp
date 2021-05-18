@@ -37,8 +37,8 @@ export default function Calculator() {
         <div className={styles.container}>
 
             <div>
-                <h3>IMC</h3>
-                <p>(Índice de Massa Corporal)</p>
+                <h3>BMI</h3>
+                <p>(Body Mass Index)</p>
 
             </div>
 
