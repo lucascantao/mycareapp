@@ -1,5 +1,5 @@
 # My Care App v1
 
-## Personal Practice (###nextjs)
+## Personal Project
 
-## LIVE [MyCare](https://mycareapp.vercel.app)
+- LIVE [MyCare](https://mycareapp.vercel.app)
